@@ -1,0 +1,10 @@
+li a{
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+li a:hover{
+    background-color: #d0a772;
+}

@@ -1,0 +1,132 @@
+<div class="all-page-title page-breadcrumb">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Adminustration</h1>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-sm-9">
+        <br>
+        <h1 style="font-size: 30px; font-weight: 900;">Modifier Restaurant</h1>
+        
+        <div class="form-group row">
+            
+           
+        </div>
+        <hr>
+        <div class="row">
+            <!-- Partie formulaire à Gauche en haut -->
+            <div class="col-md-12">
+                <form class="form-horizontal" [formGroup]="formC">
+                    
+                     <fieldset id="account">
+                        
+                         <div class="form-group required">
+                             <label for="input-firstname" class="col-sm-2 control-label">Nom</label>
+                             <div class="col-sm-10">
+                                 <input type="text" class="form-control" formControlName="nom" placeholder="" value="" name="firstname">
+                             </div>
+                         </div>
+ 
+                         <div class="form-group required">
+                             <label for="input-firstname" class="col-sm-2 control-label">Email</label>
+                             <div class="col-sm-10">
+                                 <input type="text" class="form-control" formControlName="email" placeholder="" value="" name="firstname">
+                             </div>
+                         </div>
+                         
+ 
+                         <div class="form-group required">
+                             <label for="input-lastname" class="col-sm-2 control-label">Adresse</label>
+                             <div class="col-sm-10">
+                                 <input type="text" class="form-control" formControlName="adresse" placeholder="" value="" name="lastname">
+                             </div>
+                         </div>
+                         
+                         <div class="form-group">
+                             <label for="input-company" class="col-sm-2 control-label">Description</label>
+                             <div class="col-sm-10">
+                                 <textarea class="form-control" formControlName="description" rows="10" name="enquiry"></textarea>
+                             </div>
+                         </div>
+ 
+                         <div class="form-group required">
+                             <label for="input-lastname" class="col-sm-2 control-label">Specialites</label>
+                             <div class="col-sm-10">
+                                 <input type="text" class="form-control" formControlName="specialites" placeholder="" value="" name="lastname">
+                             </div>
+                         </div>
+                         
+                         <div class="form-group required">
+                             <label for="input-lastname" class="col-sm-2 control-label">Téléphone</label>
+                             <div class="col-sm-10">
+                                 <input type="text" class="form-control" formControlName="telephone" placeholder="" value="" name="lastname">
+                             </div>
+                         </div>
+                         
+ 
+                         
+                     </fieldset>
+                    
+ 
+ 
+     
+                     <fieldset style="margin-top: 30px;">
+                         <legend>Image</legend>
+                         
+                             <div class="class-slected">
+                                 <div class="form-group">
+                                     <label for="input-company" class="col-sm-2 control-label">image</label>
+                                     <div class="col-sm-5">
+                                         <input 
+                                         formControlName="file"
+                                         id="file" 
+                                         type="file" 
+                                         class="form-control"
+                                         multiple="" 
+                                         (change)="selectedM($event)">
+          
+                                     </div>
+     
+                                     <div class="col-sm-5">
+                                         <img [src]="imageSelected" style="max-width:100%; margin-bottom: 20px;">
+                                     </div>
+                                 </div>
+                              
+                               
+                             </div>
+                           
+                            
+                         
+                     </fieldset>
+                    
+                     <div class="form-group" style="border:red solid 2px;" *ngIf="isErreurs">
+                         <p style="color: red; padding: 2px 5px;">
+                           <span *ngFor="let e of erreurString">  {{e}} <br> </span> 
+                         </p>
+                     </div>
+       
+                 
+                     <div class="buttons">
+                         <div class="pull-right">
+                             <input type="submit" class="btn btn-primary" value="Modifer" (click)="addProduit()">
+                         </div>
+                     </div>
+                 </form>
+
+                 <br>
+                 <br>
+      
+      </div>
+      
+    </div>
+  </div>

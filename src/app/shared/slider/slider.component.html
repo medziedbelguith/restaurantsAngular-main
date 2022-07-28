@@ -1,0 +1,26 @@
+<div style="position:relative; width: 100%;">
+    
+    <div style="position: absolute; height: 100%; width: 100%; top:0px; left:0px; background-color: rgba(0, 0, 0, 0.507);"></div>
+
+    <div class="conteneur-slider">
+      
+       <div class="item-slider slider1">
+          <img src="./assets/images/slider-01.jpg" alt="">
+        </div>
+        
+        <div class="item-slider slider2">
+            <img src="./assets/images/slider-02.jpg" alt="">
+        </div>
+      
+        <div class="item-slider slider3">
+            <img src="./assets/images/slider-03.jpg" alt="">
+        </div>
+      
+        <div style="position:absolute; width:100%; height: 10%; margin:auto; top:0px; bottom:0px; padding: 10px;">
+            <button class="w3-button w3-display-left" (click)="plusDivs(-1)">&#10094; </button>
+            <button class="w3-button w3-display-right" (click)="plusDivs(+1)" style="float:right;">&#10095;</button>
+        </div>
+        
+    </div>
+    
+</div>

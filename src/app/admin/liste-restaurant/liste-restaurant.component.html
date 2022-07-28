@@ -1,0 +1,79 @@
+<div class="all-page-title page-breadcrumb">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Adminustration</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="col-sm-9">
+        <br>
+        <h1 style="font-size: 30px; font-weight: 900;">Restaurants</h1>
+        <button class="btn btn-success" style="float:right; padding: 5px;"><a class="nav-link" [routerLink]="['/AddRestaurant']">Ajouter Restaurant</a></button>
+
+        <table class="table table-striped" id="output">
+          
+          <thead>
+              <tr>
+                  <th *ngFor="let key of objectKeys(itemsVariable)" >
+                      <div class="th-tableau" (click)="changeCroissante(key)">
+                          {{key}} 
+                          <div class="buttons-croissante">
+                             
+                              <i class="fas fa-caret-up croissante {{key}}-croissante"></i>
+                              <i class="fas fa-caret-down croissante {{key}}-croissante"></i>
+                          
+                          </div>
+                      </div>
+                  </th>
+                  
+                  <th>Action</th>
+              </tr>
+          </thead>
+          <tbody>
+
+              <tr *ngFor="let item of clients">
+                
+                  <td *ngFor="let key of objectKeys(itemsVariable)">{{item[key]}}</td>
+             
+                
+                  <td>
+
+                      <a class="class-icon" [href]="'EditRestaurant/'+item.id" >
+                          <i class="fas fa-edit"></i>
+                      </a>
+
+                      <a class="class-icon" (click)="openModalDelete(item.id,item.nom)">
+                          <i class="fas fa-trash"></i>
+                      </a>
+
+                  </td>
+
+              </tr>
+
+          </tbody>
+      </table>
+
+
+      <hr>
+      <app-pagination [page]="request.page" [totalPage]="totalPage" (setPageEvent)="setPage($event)"></app-pagination>
+  
+    
+    
+    
+      </div>
+      
+    </div>
+  </div>
+
+  <app-delete-modal [isLoading]="isLoading" [isOpenModalDelete]="isOpenModalDelete"
+            [idDeleteModal]="idDeleteModal" [params1Delete]="params1Delete" [params2Delete]="params2Delete"
+            (deleteItem)="deleteItem()" (closeModalDelete)="closeModalDelete()"></app-delete-modal>

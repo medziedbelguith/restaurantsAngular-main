@@ -1,0 +1,127 @@
+.item-slider img{
+    width: 100%;
+}
+
+.item-slider{
+    width: 100% !important;
+    transition: transform 1000ms ease-in-out;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.conteneur-slider{
+    width: 100%; 
+    overflow-x: hidden; 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: nowrap;
+}
+
+.w3-button{
+    font-size: 40px;
+    background-color: transparent;
+    border: none;
+    color: rgba(#ffffff, 0.8);
+    text-shadow: 1px 1px 1px #1f1e1e;
+    font-weight: 800;
+  }
+  
+  .w3-button:hover {
+    color: white;
+    text-shadow: 2px 2px 3px #1f1e1e;
+  }
+
+  .banner-info-bg{
+      color: white;
+      margin: 200px auto;
+      margin-bottom: 150px;
+      max-width: 700px;
+      float:left;
+  }
+
+  
+h5{
+  font-size: 85px;
+  line-height: 90px;
+  font-weight: 700;
+}
+
+  @media (max-width: 1000px){
+    .banner-info-bg{
+      margin: 150px auto;
+      margin-bottom: 120px;
+    }
+
+    h5{
+      font-size: 50px;
+      line-height: 50px;
+    }
+  }
+
+
+  @media (max-width: 750px){
+    .banner-info-bg{
+      margin: 100px auto;
+      margin-bottom: 80px;
+    }
+  }
+
+  @media (max-width: 568px){
+    .banner-info-bg{
+      margin: 80px auto;
+      margin-bottom: 50px;
+    }
+  }
+
+
+.slider1{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/slider-01.jpg) center no-repeat;
+}
+
+.slider2{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/slider-02.jpg) center no-repeat;
+}
+
+.slider3{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/slider-03.jpg) center no-repeat;
+}
+
+
+p{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.banner-info-bg a{
+  padding: 12px 36px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  transition: 0.3s ease-in;
+  border-radius: 6px;
+  cursor: pointer !important;
+  font-family: 'Barlow', sans-serif;
+  color: #fff;
+  background-color: #fe5a0e;
+  border-color: #fe5a0e;
+  margin-right: 0.5rem !important;
+}
+
+.btn-white{
+  color:  #fe5a0e !important;
+  background-color: #fff !important;
+  border-color: #fe5a0e !important;
+}
+
+select{
+  width: auto;
+  display: inline-flex;
+  margin-top: 3rem !important;
+  margin-right: 0.5rem !important;
+}
+
+.blog-demande-devis{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
